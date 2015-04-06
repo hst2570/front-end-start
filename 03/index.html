@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>박스오피스!</title>
+</head>
+<body>
+  <input type = "text" id = "keyword" />
+  <input type = "button" id = "search" value = "검색" />
+
+<div id="wrap"> </div>
+
+<input type = "button" id = "addMore" value = "더보기" />
+
+<script type="text/template" id="listTemplate">
+  <ul>
+    <% for(var i=0; i<list.length; i++) { %>
+    <li>
+      <a href = <%= list[i].link %>><%= list[i].title %></a>
+    </li>
+    <%} %>
+  </ul>
+
+</script>
+
+<script src="util.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
